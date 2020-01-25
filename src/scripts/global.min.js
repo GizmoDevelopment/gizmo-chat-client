@@ -1,5 +1,6 @@
 "use strict";
 
-const path = require("path");
-const electron = require("electron");
-const { remote, ipcRenderer } = electron;
+const path = require("path"),
+    $ = require("../modules/jquery.min.js"),
+    electron = require("electron"),
+    { remote, ipcRenderer } = electron;
