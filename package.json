@@ -1,10 +1,35 @@
 {
   "name": "gizmo-chat-client",
   "version": "0.0.1",
-  "description": "",
+  "description": "Compact chat client.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "build": {
+    "appId": "com.gizmo.chat",
+    "productName": "Gizmo Chat",
+    "copyright": "Copyright (C) 2020 GizmoTjaz",
+    "files": [
+        "**/*",
+        "!**/{.git,node_modules,.gitignore,}",
+        "!**/src/{scripts/index.js,styles/main.css}"
+    ],
+    "nsis": {
+        "oneClick": false,
+        "perMachine": true,
+        "allowElevation": true,
+        "allowToChangeInstallationDirectory": false,
+        "createDesktopShortcut": true,
+        "uninstallDisplayName": "Gizmo Chat",
+        "license": "LICENSE"
+    },
+    "win": {
+        "target": "nsis",
+        "publisherName": "Gizmo"
+    }
   },
   "repository": {
     "type": "git",
