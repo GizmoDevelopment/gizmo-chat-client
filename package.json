@@ -2,7 +2,7 @@
   "name": "gizmo-chat-client",
   "version": "0.0.1",
   "description": "Compact chat client.",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron .",
     "pack": "build --dir",
