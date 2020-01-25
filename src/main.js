@@ -21,8 +21,8 @@ if (singleInstanceLock) {
     app.on("ready", () => {
 
         mainWindow = new BrowserWindow({
-            minWidth: 1200,
-            minHeight: 700,
+            minWidth: 1000,
+            minHeight: 600,
             frame: false,
             backgroundColor: "#222222",
             webPreferences: {
