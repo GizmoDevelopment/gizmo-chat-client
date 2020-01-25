@@ -14,7 +14,7 @@
     "copyright": "Copyright (C) 2020 GizmoTjaz",
     "files": [
         "**/*",
-        "!**/{.git,node_modules,.gitignore,}",
+        "!**/{.git,.gitignore,}",
         "!**/src/{scripts/index.js,styles/main.css}"
     ],
     "nsis": {
