@@ -1,4 +1,4 @@
-const socket = require("socket.io-client").connect("http://localhost:3000", { transports: ["websocket"] });
+const socket = io.connect("http://localhost:3000", { transports: ["websocket"] });
 
 $(document).ready($ => {
 
