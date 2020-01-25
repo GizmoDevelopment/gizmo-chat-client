@@ -26,7 +26,7 @@ if (singleInstanceLock) {
             frame: false,
             backgroundColor: "#222222",
             webPreferences: {
-                nodeIntegration = true
+                nodeIntegration: true
             }
         });
 
