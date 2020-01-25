@@ -1,9 +1,11 @@
 const socket = require("socket.io-client").connect("http://localhost:3000", { transports: ["websocket"] });
 
-console.log("Started");
+$(document).ready($ => {
 
-socket.emit("auth", { userKey: "bruh" });
+    socket.emit("auth", { userKey: "bruh" });
 
-socket.on("response", res => {
-    console.log(res);
+    socket.on("response", res => {
+        console.log(res);
+    });
+
 });
