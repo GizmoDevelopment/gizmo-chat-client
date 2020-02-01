@@ -1,12 +1,18 @@
 <html>
     <head>
         <title>Gizmo Chat</title>
-        <link rel = "stylesheet" href = "../styles/main.min.css"/>
+        <link rel = "stylesheet" href = "../styles/main.css"/>
+        <link rel = "stylesheet" href = "../styles/index.css"/>
     </head>
     <body>
-        <div id = "onlineUsers"></div>
+        <nav>
+            <div id = "navTitle">Gizmo Chat</div>
+            <button class = "navButton" id = "navClose">X</button>
+            <button class = "navButton" id = "navMinimize">-</button>
+        </nav>
+        <div id = "sideBar"></div>
     </body>
     <script type = "text/javascript" src = "../modules/socket.io.min.js"></script>
-    <script type = "text/javascript" src = "../scripts/global.min.js"></script>
-    <script type = "text/javascript" src = "../scripts/index.min.js"></script>
+    <script type = "text/javascript" src = "../scripts/global.js"></script>
+    <script type = "text/javascript" src = "../scripts/index.js"></script>
 </html>
