@@ -1,3 +1,5 @@
+"use strict";
+
 // Modules //
 const socket = io.connect("http://localhost:3000", { transports: ["websocket"] });
 
@@ -9,7 +11,7 @@ var currentConversation;
 
 $(document).ready($ => {
 
-    socket.emit("auth", { userKey: "bruh" });
+    socket.emit("auth", { userKey: "a" });
 
     socket.on("response", res => {
 
@@ -29,9 +31,13 @@ $(document).ready($ => {
 
                 for (let key in data) {
                     if (typeof data[key] == "object") {
-                        $("#sideBar").append(`
-                            <div id = "sideBarUser-${data[key].user_id}" class = "sideBarUser">
+                        $("#friendsList").append(`
+                            <div id = "friendsListUser-${data[key].user_id}" class = "friendsListUser">
                                 <img src = "https://www.gizmo.moe/uploads/avatars/${data[key].user_avatar}" draggable = false>
+                                <span class = "friendUsername">${data[key].user_uid}</span>
+                                <!--<div class = "friendControlButtons">
+                                    <div class = "button">X</div>
+                                </div>-->
                             </div>
                         `);
                     }
@@ -43,9 +49,23 @@ $(document).ready($ => {
         }
     });
 
-    $("#sideBar").on("click", ".sideBarUser", e => {
-        closeConversation();
-        openConversation(e.target.id);
+    /*
+        $("#sideBar").on("click", ".sideBarUser", e => {
+            closeConversation();
+            openConversation(e.target.id);
+        });
+
+        $("#sideBar").on("mouseenter", ".sideBarUser", e => {
+            createTooltip(e.target, "right", e.target.id);
+        });
+
+        $("#sideBar").on("mouseleave", ".sideBarUser", e => {
+            removeTooltip(e.target);
+        });
+    */
+
+    $("#sideBar").on("click", "#friendsButton", e => {
+        $("#friendsList").css("visible") ? $("#friendsList").hide() : $("#friendsList").show();
     });
 
 });
