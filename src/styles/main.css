@@ -18,7 +18,7 @@
     color: var(--textColor);
     font-family: var(--font);
     overflow: hidden;
-    user-select: none;
+    -webkit-user-select: none;
 }
 
 button {
@@ -50,6 +50,10 @@ nav * {
     -webkit-app-region: no-drag;
 }
 
+#navMinimize {
+    border-bottom-left-radius: 5px;
+}
+
 #navTitle {
     width: 300px;
     float: left;
@@ -65,4 +69,15 @@ nav * {
 body {
     background: var(--backgroundColor) linear-gradient(140deg, rgba(1, 18, 34, 1) 0%, rgba(29, 0, 34, 1) 100%) no-repeat 0 0;
     margin: 0px;
+}
+
+/* Tooltips */
+
+.tooltip {
+    position: absolute;
+    height: inherit;
+    width: auto;
+    left: calc(100% + 20px);
+    background: var(--backgroundColor);
+    border-radius: 5px;
 }
