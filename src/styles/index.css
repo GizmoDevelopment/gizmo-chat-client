@@ -1,3 +1,5 @@
+/* Sidebar */
+
 #sidebar {
     width: 40px;
     height: calc(100% - 33px);
@@ -5,14 +7,59 @@
     margin-left: 5px;
 }
 
-.sideBarUser {
+#sidebar div {
     width: 100%;
     height: 40px;
+    background-color: var(--backgroundColor);
     margin-bottom: 5px;
-}
-
-.sideBarUser img {
-    height: inherit;
-    width: inherit;
+    z-index: 2;
     border-radius: 10px;
 }
+
+/* Friends List */
+
+#friendsList {
+    position: absolute;
+    top: 0;
+    background: var(--backgroundColor);
+    border-radius: 15px;
+    width: calc(100% - 55px);
+    height: calc(100% - 35px);
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.friendsListUser {
+    position: relative;
+    width: calc(100% - 10px);
+    margin-left: 5px;
+    margin-top: 5px;
+    transition: all .3s ease-out;
+}
+
+.friendsListUser img {
+    width: 40px;
+}
+
+.friendsListUser, .friendsListUser img {
+    height: 40px;
+    border-radius: 10px;
+}
+
+.friendsListUser span {
+    position: absolute;
+    top: 25%;
+    margin-left: 5px;
+}
+
+.friendsListUser:hover {
+    background: var(--hoverColor);
+}
+
+/*
+    .friendControlButtons {
+        float: right;
+        width: 100px;
+        height: 100%;
+    }
+*/
