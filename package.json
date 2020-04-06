@@ -13,22 +13,22 @@
     "productName": "Gizmo Chat",
     "copyright": "Copyright (C) 2020 GizmoTjaz",
     "files": [
-        "**/*",
-        "!**/{.git,.gitignore,}",
-        "!**/src/{scripts/index.js,styles/main.css}"
+      "**/*",
+      "!**/{.git,.gitignore,}",
+      "!**/src/{scripts/index.js,styles/main.css}"
     ],
     "nsis": {
-        "oneClick": false,
-        "perMachine": true,
-        "allowElevation": true,
-        "allowToChangeInstallationDirectory": false,
-        "createDesktopShortcut": true,
-        "uninstallDisplayName": "Gizmo Chat",
-        "license": "LICENSE"
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true,
+      "uninstallDisplayName": "Gizmo Chat",
+      "license": "LICENSE"
     },
     "win": {
-        "target": "nsis",
-        "publisherName": "Gizmo"
+      "target": "nsis",
+      "publisherName": "Gizmo"
     }
   },
   "repository": {
@@ -42,6 +42,7 @@
   },
   "homepage": "https://github.com/GizmoDevelopment/gizmo-chat-client#readme",
   "dependencies": {
+    "minimist": "^1.2.5",
     "path": "^0.12.7"
   },
   "devDependencies": {
