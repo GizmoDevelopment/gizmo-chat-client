@@ -13,7 +13,7 @@ function resolveId (id) {
 }
 
 function loadFriendsList () {
-    socket.emit("data", "user:fetchFriendsList", data => {
+    socket.emit("data", { type: "user:fetchFriendsList" }, data => {
         if (typeof data === "object") {
 
             $("#friendsList").empty();
@@ -35,6 +35,12 @@ function loadFriendsList () {
                 }
             }
         }
+    });
+}
+
+function launchConversation (id) {
+    socket.emit("data", { type: "user:requestRoom", users: [userData.id, id] }, data => {
+        console.log(data);
     });
 }
 
@@ -61,12 +67,8 @@ $(document).ready($ => {
         }
     });
 
-    $("#sideBar").on("click", "#friendsButton", e => {
-        $("#friendsList").css("visible") ? $("#friendsList").hide() : $("#friendsList").show();
-    });
-
-    $("#friendsList").on("click", ".friendsListUser", (e) => {
-        launchConversation(resolveId(e.target.id));
+    $("#friendsList").on("click", ".friendsListUser", function () {
+        launchConversation(resolveId($(this).attr("id")));
     });
 
 });
