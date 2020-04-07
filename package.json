@@ -42,11 +42,11 @@
   },
   "homepage": "https://github.com/GizmoDevelopment/gizmo-chat-client#readme",
   "dependencies": {
-    "minimist": "^1.2.5",
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "electron": "^7.1.10",
-    "electron-builder": "^22.2.0"
+    "dotenv": "^8.2.0",
+    "electron": "^8.2.1",
+    "electron-builder": "^22.4.1"
   }
 }
