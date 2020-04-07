@@ -1,9 +1,11 @@
 "use strict";
 
-const path = require("path"),
-    $ = require("../modules/jquery.min.js"),
-    electron = require("electron"),
-    { remote, ipcRenderer } = electron;
+const path = require("path");
+const $ = require("../modules/jquery.min.js");
+const electron = require("electron");
+const { remote, ipcRenderer } = electron;
+
+const __core = path.join(__dirname, "../../");  
 
 function createTooltip (parent, pos, data) {
 
